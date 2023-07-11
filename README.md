@@ -1,4 +1,4 @@
-![HomeGallery hero image](https://home-gallery.org/hero.png "self-hosted open-source web gallery")
+
 
 # HomeGallery
 
