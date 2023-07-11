@@ -1,0 +1,47 @@
+{
+  "name": "@home-gallery/server",
+  "version": "1.0.0",
+  "description": "Web server of HomeGallery",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "cpy \"src/**/!(*.test.js|*.ne)\" dist",
+    "postbuild": "cpy \"../webapp/dist/**\" dist/public",
+    "serve": "node index.js",
+    "watch": "onchange -d 200 \"src/**\" -- npm run build",
+    "test": "tap --no-check-coverage --no-coverage-report src/*/*.test.js",
+    "watch:test": "tap --no-check-coverage --no-coverage-report -w src/*/*.test.js"
+  },
+  "keywords": [
+    "HomeGallery",
+    "server",
+    "express"
+  ],
+  "author": "Sebastian Felis <sebastian@silef.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xemle/home-gallery.git",
+    "directory": "packages/server"
+  },
+  "dependencies": {
+    "@home-gallery/common": "file:../common",
+    "@home-gallery/database": "file:../database",
+    "@home-gallery/events": "file:../events",
+    "@home-gallery/logger": "file:../logger",
+    "@home-gallery/query": "file:../query",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "memory-cache": "^0.2.0",
+    "open": "^8.2.1",
+    "pino-http": "^6.6.0",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "@home-gallery/webapp": "file:../webapp"
+  }
+}

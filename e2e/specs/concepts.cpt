@@ -1,0 +1,26 @@
+# Init index from <dir>
+
+* Init files from <dir>
+* Create index
+
+# Init storage from <dir>
+
+* Init index from <dir>
+* Extract files
+
+# Init database from <dir>
+
+* Init storage from <dir>
+* Create database
+
+# Init server from <dir>
+
+* Init database from <dir>
+* Start only server
+* Wait for database
+
+# Start server from <dir>
+
+* Init dir from <dir>
+* Create database
+* Start only server

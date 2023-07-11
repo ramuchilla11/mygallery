@@ -1,0 +1,45 @@
+{
+  "name": "@home-gallery/extractor",
+  "version": "1.0.0",
+  "description": "Preview and metadata extractor of HomeGallery",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "validate-sharp.js"
+  ],
+  "scripts": {
+    "postinstall": "node validate-sharp.js",
+    "clean": "rimraf dist",
+    "build": "cpy \"src/**\" dist",
+    "watch": "onchange \"src/**\" -- npm run build"
+  },
+  "keywords": [
+    "HomeGallery",
+    "thumbnail",
+    "extractor"
+  ],
+  "author": "Sebastian Felis <sebastian@silef.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xemle/home-gallery.git",
+    "directory": "packages/extractor"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "@ffprobe-installer/ffprobe": "^1.1.0",
+    "@home-gallery/common": "file:../common",
+    "@home-gallery/index": "file:../index",
+    "@home-gallery/logger": "file:../logger",
+    "@home-gallery/storage": "file:../storage",
+    "@home-gallery/stream": "file:../stream",
+    "exiftool-vendored": "^14.4.0",
+    "ffprobe": "^1.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "heic-decode": "^1.1.2",
+    "jpeg-js": "^0.4.3",
+    "node-vibrant": "^3.1.5",
+    "request": "^2.88.2",
+    "sharp": "^0.28.2"
+  }
+}

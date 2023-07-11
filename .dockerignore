@@ -1,0 +1,28 @@
+package-lock.json
+.git
+.github
+**/.cache
+node_modules
+**/node_modules
+**/dist
+**/fonts
+**/.nyc_output
+/build
+/data
+/dist
+/e2e/.gauge
+/e2e/reports
+/e2e/logs
+/examples
+/latest-e2e-test
+/node
+
+# The public folder is build in docker file
+packages/server/public
+
+# Exclude api-server module
+# Build it separately in packages/api-server and run it via docker-compose
+packages/api-server
+
+# styleguide package is required only for dev
+packages/styleguide

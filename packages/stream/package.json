@@ -1,0 +1,29 @@
+{
+  "name": "@home-gallery/stream",
+  "version": "1.0.0",
+  "description": "Stream utilities for HomeGallery",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "cpy \"src/**\" dist",
+    "watch": "onchange \"src/**\" -- npm run build"
+  },
+  "keywords": [
+    "HomeGallery",
+    "utils",
+    "stream"
+  ],
+  "author": "Sebastian Felis <sebastian@silef.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xemle/home-gallery.git",
+    "directory": "packages/stream"
+  },
+  "dependencies": {
+    "@home-gallery/logger": "file:../logger"
+  }
+}

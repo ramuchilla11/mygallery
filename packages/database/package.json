@@ -1,0 +1,30 @@
+{
+  "name": "@home-gallery/database",
+  "version": "1.0.0",
+  "description": "HomeGallery database",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "cpy \"src/**\" dist",
+    "watch": "onchange \"src/**\" -- npm run build"
+  },
+  "keywords": [],
+  "author": "Sebastian Felis <sebastian@silef.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xemle/home-gallery.git",
+    "directory": "packages/database"
+  },
+  "dependencies": {
+    "@home-gallery/common": "file:../common",
+    "@home-gallery/index": "file:../index",
+    "@home-gallery/logger": "file:../logger",
+    "@home-gallery/storage": "file:../storage",
+    "@home-gallery/stream": "file:../stream",
+    "color-convert": "^2.0.1"
+  }
+}

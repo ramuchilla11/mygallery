@@ -1,0 +1,11 @@
+.cache
+.vscode
+.nyc_output
+build
+data
+dist
+node_modules
+*.tmp
+package-lock.json
+package-lock.json.cache
+gallery.config.yml

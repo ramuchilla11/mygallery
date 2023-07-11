@@ -1,0 +1,34 @@
+{
+  "name": "@home-gallery/query",
+  "version": "1.0.0",
+  "description": "User events",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "compile": "nearleyc -o src/parser/grammar.js src/parser/grammar.ne",
+    "build": "cpy \"src/**/!(*.test.js|*.ne)\" dist",
+    "watch": "npm-run-all -p watch:js watch:nearley",
+    "watch:js": "onchange \"src/**/*.js\" --delay 500 -- npm run build",
+    "watch:nearley": "onchange \"src/parser/*.ne\" --delay 500 -- npm run compile",
+    "test": "tap --no-check-coverage --no-coverage-report src/*.test.js src/**/*.test.js",
+    "watch:test": "tap --no-check-coverage --no-coverage-report -w src/*.test.js src/**/*.test.js"
+  },
+  "keywords": [
+    "HomeGallery",
+    "Search query"
+  ],
+  "author": "Sebastian Felis <sebastian@silef.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xemle/home-gallery.git",
+    "directory": "packages/query"
+  },
+  "dependencies": {
+    "moo": "^0.5.1",
+    "nearley": "^2.20.1"
+  }
+}
